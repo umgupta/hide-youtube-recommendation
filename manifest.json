@@ -1,0 +1,25 @@
+{
+    "name": "Hide youtube Recommendations",
+    "description": "Addon to hide youtube recommendations",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "main.html"
+    },
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["*://youtube.com/*", "*://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Opens hello.html"
+        }
+    }
+}
